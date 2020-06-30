@@ -24,5 +24,10 @@ namespace CurrencyConverter.Controllers
         {
             return View(_converterService.GetConversionRatios());
         }
+
+        public ActionResult Index(string originalCurrency, string targetCurrency, double amountToConvert)
+        {
+            return View(_converterService.GetConversionRatios());
+        }
     }
 }
