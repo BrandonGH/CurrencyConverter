@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CurrencyConverter.Models.CurrencyConversionRatio>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Currency Conversion Tool</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalCurrency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetCurrency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ratio)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OriginalCurrency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetCurrency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ratio)
+            </td>
+        </tr>
+    }
+</table>
